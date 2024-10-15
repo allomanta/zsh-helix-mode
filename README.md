@@ -1,3 +1,5 @@
+# Zsh Helix Modes
+
 A set of keybindings for the zsh line editor inspired by [Helix](https://helix-editor.com/)/[Kakoune](https://kakoune.org/) 
 
 I use [Helix](https://helix-editor.com/) as my main editor and have grown accustomed to motions based around selections. Because of this the built in vi-mode felt wrong to me so I created my own simple and limited version. 
