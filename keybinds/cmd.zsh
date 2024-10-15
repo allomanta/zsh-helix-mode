@@ -1,4 +1,4 @@
-function bind() {
+local function bind() {
   bindkey -M hxcmd "$@"
 }
 
@@ -6,7 +6,7 @@ bind : execute-named-cmd
 
 # Change modes
 bind i _hx-insert
-bind a _hx-add-next
+bind a _hx-append
 bind v _hx-vis-mode
 bind I .vi-insert-bol
 bind A .vi-add-eol
@@ -50,11 +50,11 @@ bind R _hx-paste-replace-selection
 
 # Copy Paste
 bind y _hx-yank
-bind " y" _hx-yank-to-clipboard
+bind " y" _hx-yank-clipboard
 bind p _hx-paste
 bind P .vi-put-before
-bind " p" _hx-paste-from-clipboard
-bind " P" _hx-paste-before-from-clipboard
+bind " p" _hx-paste-clipboard
+bind " P" _hx-paste-clipboard-before
 
 # Lines
 bind o .vi-open-line-below 

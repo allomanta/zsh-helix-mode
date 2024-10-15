@@ -1,4 +1,4 @@
-function bind() {
+local function bind() {
   bindkey -M hxins "$@"
 }
 

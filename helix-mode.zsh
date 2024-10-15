@@ -13,8 +13,8 @@ source "$project_root"/keybinds/cmd.zsh
 source "$project_root"/keybinds/ins.zsh
 source "$project_root"/keybinds/vis.zsh
 
-# TODO, better way needed
-source "$project_root"/widgets/common/hx-command-mode.zsh
+# Source widgets
+for f ("$project_root"/widgets/**/*.zsh(N.))  source $f
 
 export KEYTIMEOUT=1
 source "$project_root"/cursor.zsh
