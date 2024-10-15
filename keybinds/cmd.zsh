@@ -68,7 +68,7 @@ bind x _hx-select-line
 
 # misc
 bind '^[[200~' .bracketed-paste
-bind ~ .vi-swap-case
+bind '~' .vi-swap-case
 bind u .undo
 bind U .redo
 bind d _hx-delete
@@ -76,6 +76,4 @@ bind c _hx-change
 bind "^M" .accept-line
 bind '^[' _hx-unselect
 
-autoload -Uz .edit-command-line
-zle -N .edit-command-line
-bind m .edit-command-line
+bind ' h' _hx-edit-command-line
