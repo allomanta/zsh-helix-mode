@@ -1,24 +1,23 @@
 _wrap=(
   end-of-line
+  vi-backward-blank-word
+  vi-forward-blank-word-end
+  vi-backward-word
   beginning-of-line
+  vi-forward-char
+  vi-forward-word-end
   end-of-line
   beginning-of-buffer-or-history
   end-of-buffer-or-history
   down-line-or-history
   up-line-or-history
-  vi-backward-char
   vi-first-non-blank
-  vi-open-line-below
-  vi-open-line-above
-  vi-indent
-  vi-unindent
 )
 
 for wrapee in $_wrap; do
-  name="_hx-$(echo $wrapee | sed 's/vi-//g')"
+  name="_vis-$(echo $wrapee | sed 's/vi-//g')"
   eval "$name() {
     zle ."$wrapee"
-    zle .set-mark-command
   }"
   zle -N $name
 done

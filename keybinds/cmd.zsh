@@ -47,6 +47,7 @@ bind N .vi-rev-repeat-search
 # Replace
 bind r .vi-replace-chars
 bind R _hx-paste-replace-selection
+bind " R" _hx-paste-clipboard-replace-selection
 
 # Copy Paste
 bind y _hx-yank
@@ -60,8 +61,8 @@ bind " P" _hx-paste-clipboard-before
 bind o .vi-open-line-below 
 bind O .vi-open-line-above
 bind J .vi-join
-bind '>' .vi-indent -n 1
-bind '<' .vi-unindent -n 1
+bind '>' .vi-indent
+bind '<' .vi-unindent
 bind x _hx-select-line
 
 
