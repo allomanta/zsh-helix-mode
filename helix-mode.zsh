@@ -1,4 +1,7 @@
 local project_root="${0:a:h}"
+if (( ${+FILE_MANAGER} == 0 )); then
+  FILE_MANAGER=yazi
+fi
 
 # Create helix keymaps
 bindkey -N hxins emacs

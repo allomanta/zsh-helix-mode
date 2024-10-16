@@ -75,5 +75,6 @@ bind d _hx-delete
 bind c _hx-change
 bind "^M" .accept-line
 bind '^[' _hx-unselect
+bind ' f' _hx-open-file-manager
 
 bind ' h' _hx-edit-command-line

@@ -14,6 +14,8 @@ Feedback/tips/improvements are definitely appreciated.
 ## Install
 I don't use a plugin manager or anything like that but you can use this by cloning the repo somewhere (for me it's in my `ZDOTDIR`) and then source the `helix-mode.zsh` file inside your `.zshrc` file.
 
+By default ' f' in command and visual modes is set to open the terminal file manager [yazi](https://yazi-rs.github.io/), but this can be changed by setting the variable `$FILE_MANAGER` before sourcing `helix-mode.zsh`.
+
 Note: this script also changes the cursor to be a block in the hx/vi normal modes and a line in the insert modes.
 
 ## Modes/Keybindings
