@@ -60,7 +60,7 @@ bind " P" _hx-paste-clipboard-before
 # Lines
 bind o .vi-open-line-below 
 bind O .vi-open-line-above
-bind J .vi-join
+bind J _hx-join
 bind '>' .vi-indent
 bind '<' .vi-unindent
 bind x _hx-select-line
