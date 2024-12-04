@@ -17,6 +17,11 @@ bind j _hx-down-line-or-history
 bind k _hx-up-line-or-history
 bind l _hx-forward-char
 
+bind "^[[D" _hx-backward-char
+bind "^[[B" _hx-down-line-or-history
+bind "^[[A" _hx-up-line-or-history
+bind "^[[C" _hx-forward-char
+
 # Word movement
 bind w _hx-forward-word
 bind W _hx-forward-blank-word
