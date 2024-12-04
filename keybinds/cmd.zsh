@@ -72,6 +72,7 @@ bind x _hx-select-line
 
 
 # misc
+bind '^[;' _hx-switch-selection-order
 bind '^[[200~' .bracketed-paste
 bind '~' .vi-swap-case
 bind u .undo
