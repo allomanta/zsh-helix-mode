@@ -3,3 +3,4 @@ local function bind() {
 }
 
 bind '^[' _hx-cmd-mode
+bind '^[[3~' .delete-char

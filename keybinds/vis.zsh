@@ -79,6 +79,7 @@ bind '~' .vi-swap-case
 bind u .undo
 bind U .redo
 bind d _hx-delete
+bind '^[[3~' _hx-delete
 bind c _hx-change
 bind "^M" .accept-line
 bind ' f' _hx-open-file-manager
