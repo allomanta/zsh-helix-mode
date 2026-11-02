@@ -1,4 +1,4 @@
-q() {
+_hx-quit() {
   exit
 }
-zle -N q
+zle -N q _hx-quit
