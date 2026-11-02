@@ -25,5 +25,4 @@ fi
 } "${0:a:h}"
 
 export KEYTIMEOUT=1
-cursor_mode
 
