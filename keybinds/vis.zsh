@@ -18,10 +18,10 @@ bind j _vis-down-line-or-history
 bind k _vis-up-line-or-history
 bind l _vis-forward-char
 
-bind "^[[D" _hx-backward-char
-bind "^[[B" _hx-down-line-or-history
-bind "^[[A" _hx-up-line-or-history
-bind "^[[C" _hx-forward-char
+bind "^[[D" _vis-backward-char
+bind "^[[B" _vis-down-line-or-history
+bind "^[[A" _vis-up-line-or-history
+bind "^[[C" _vis-forward-char
 
 # Word movement
 bind w _vis-forward-word
