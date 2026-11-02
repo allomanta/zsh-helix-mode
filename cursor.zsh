@@ -1,9 +1,8 @@
 cursor_mode() {
-    # See https://ttssh2.osdn.jp/manual/4/en/usage/tips/vim.html for cursor shapes
-    cursor_block='\e[2 q'
-    cursor_beam='\e[6 q'
-
     function _hx-cursor-keymap-select {
+        # See https://ttssh2.osdn.jp/manual/4/en/usage/tips/vim.html for cursor shapes
+        local cursor_block='\e[2 q'
+        local cursor_beam='\e[6 q'
         if [[ ${KEYMAP} == vicmd ]] ||
             [[ ${KEYMAP} == hxcmd ]] ||
             [[ $1 = 'block' ]]; then
@@ -17,6 +16,7 @@ cursor_mode() {
     }
 
     _hx-cursor-line-init() {
+        local cursor_beam='\e[6 q'
         echo -ne $cursor_beam
     }
 

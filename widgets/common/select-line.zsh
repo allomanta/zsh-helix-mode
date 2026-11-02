@@ -1,5 +1,5 @@
 _hx-select-line() {
-  current=$CURSOR
+  local current=$CURSOR
   CURSOR=$(($MARK+1))
   zle .beginning-of-line
   if [[ $CURSOR != $(($MARK+1)) ]]; then

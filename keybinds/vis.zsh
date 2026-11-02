@@ -1,4 +1,4 @@
-local function bind() {
+bind() {
   bindkey -M hxvis "$@"
 }
 
@@ -85,3 +85,5 @@ bind "^M" .accept-line
 bind ' f' _hx-open-file-manager
 
 bind ' h' _hx-edit-command-line
+
+unfunction bind

@@ -1,6 +1,6 @@
 _hx-join() {
-  old_mark=$MARK
-  old_cursor=$CURSOR
+  local old_mark=$MARK
+  local old_cursor=$CURSOR
   NUMERIC=-1 zle .set-mark-command
   zle .vi-join
   zle .set-mark-command

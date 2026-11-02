@@ -1,6 +1,8 @@
-local function bind() {
+bind() {
   bindkey -M hxins "$@"
 }
 
 bind '^[' _hx-cmd-mode
 bind '^[[3~' .delete-char
+
+unfunction bind

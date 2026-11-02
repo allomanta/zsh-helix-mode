@@ -1,4 +1,4 @@
-local function bind() {
+bind() {
   bindkey -M hxcmd "$@"
 }
 
@@ -85,3 +85,5 @@ bind '^[' _hx-unselect
 bind ' f' _hx-open-file-manager
 
 bind ' h' _hx-edit-command-line
+
+unfunction bind

@@ -1,5 +1,5 @@
 _hx-switch-selection-order() {
-  current=$CURSOR
+  local current=$CURSOR
   CURSOR=$MARK
   MARK=$current
 }
