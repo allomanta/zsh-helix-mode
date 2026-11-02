@@ -3,7 +3,7 @@ cursor_mode() {
     cursor_block='\e[2 q'
     cursor_beam='\e[6 q'
 
-    function zle-keymap-select {
+    function _hx-cursor-keymap-select {
         if [[ ${KEYMAP} == vicmd ]] ||
             [[ ${KEYMAP} == hxcmd ]] ||
             [[ $1 = 'block' ]]; then
@@ -16,10 +16,13 @@ cursor_mode() {
         fi
     }
 
-    zle-line-init() {
+    _hx-cursor-line-init() {
         echo -ne $cursor_beam
     }
 
-    zle -N zle-keymap-select
-    zle -N zle-line-init
+    autoload -Uz add-zle-hook-widget
+    zle -N _hx-cursor-keymap-select
+    zle -N _hx-cursor-line-init
+    add-zle-hook-widget keymap-select _hx-cursor-keymap-select
+    add-zle-hook-widget line-init _hx-cursor-line-init
 }
