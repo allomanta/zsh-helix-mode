@@ -24,12 +24,12 @@ bind "^[[A" _hx-up-line-or-history
 bind "^[[C" _hx-forward-char
 
 # Word movement
-bind w _hx-forward-word
-bind W _hx-forward-blank-word
-bind e _hx-forward-word-end
-bind E _hx-forward-blank-word-end
-bind b _hx-backward-word
-bind B _hx-backward-blank-word
+bind w _vis-forward-word
+bind W _vis-forward-blank-word
+bind e _vis-forward-word-end
+bind E _vis-forward-blank-word-end
+bind b _vis-backward-word
+bind B _vis-backward-blank-word
 
 # Line movement
 bind "gg" _vis-beginning-of-buffer-or-history

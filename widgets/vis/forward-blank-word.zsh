@@ -1,5 +1,5 @@
-_hx-forward-blank-word() {
+_vis-forward-blank-word() {
   zle .vi-forward-blank-word
   ((--CURSOR))
 }
-zle -N _hx-forward-blank-word
+zle -N _vis-forward-blank-word
