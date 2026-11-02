@@ -1,7 +1,6 @@
 _wrap=(
   end-of-line
   vi-backward-blank-word
-  vi-forward-blank-word-end
   vi-backward-word
   beginning-of-line
   vi-forward-char
