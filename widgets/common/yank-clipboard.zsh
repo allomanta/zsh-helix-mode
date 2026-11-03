@@ -1,9 +1,10 @@
 _hx-yank-clipboard() {
+  local text
   if [[ $MARK -le $CURSOR ]]; then
-    wl-copy <<< ${BUFFER:$MARK:$((CURSOR-MARK+1))}
+    text=${BUFFER:$MARK:$((CURSOR-MARK+1))}
   else
-    wl-copy <<< ${BUFFER:$CURSOR:((MARK-CURSOR+1))}
+    text=${BUFFER:$CURSOR:$((MARK-CURSOR))}
   fi
+  print -rn -- $text | _hx-clipboard-copy
 }
 zle -N _hx-yank-clipboard
-
