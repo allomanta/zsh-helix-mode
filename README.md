@@ -18,6 +18,9 @@ By default ' f' in command and visual modes is set to open the terminal file man
 
 Note: this script also changes the cursor to be a block in the hx/vi normal modes and a line in the insert modes.
 
+### Clipboard
+You can set you're own clipboard command using `$HX_CLIPBOARD_COPY` and `$HX_CLIPBOARD_PASTE`, eq `wl-copy` on wayland or `pbcopy` on macos. Falls back to tmux when in tmux or OSC 52 if your terminal supports it.
+
 ## Modes/Keybindings
 Sourcing helix-mode.zsh adds the following 3 modes:
 - hxins: A copy of the built in emacs mode with escape rebound to enter command mode
