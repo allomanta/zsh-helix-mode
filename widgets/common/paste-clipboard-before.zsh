@@ -1,5 +1,7 @@
 _hx-paste-clipboard-before() {
-  local text=$(wl-paste)
+  local text REPLY
+  _hx-clipboard-paste || return
+  text=$REPLY
   if [[ $MARK -le $CURSOR ]]; then
     BUFFER=${BUFFER:0:$MARK}$text${BUFFER:$MARK}
     CURSOR=$CURSOR+${#text}

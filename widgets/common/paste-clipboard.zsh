@@ -1,5 +1,7 @@
 _hx-paste-clipboard() {
-  local text=$(wl-paste)
+  local text REPLY
+  _hx-clipboard-paste || return
+  text=$REPLY
   if [[ $MARK -le $CURSOR ]]; then
     ((++CURSOR))
     LBUFFER+=$text
