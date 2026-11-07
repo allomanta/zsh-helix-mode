@@ -22,6 +22,7 @@ fi
   for f ("$project_root"/widgets/**/*.zsh(N.))  source $f
 
   source "$project_root"/cursor.zsh
+  source "$project_root"/selection.zsh
 } "${0:a:h}"
 
 export KEYTIMEOUT=1
