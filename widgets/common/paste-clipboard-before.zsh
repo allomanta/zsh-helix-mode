@@ -1,13 +1,7 @@
 _hx-paste-clipboard-before() {
-  local text REPLY
+  local reply REPLY
   _hx-clipboard-paste || return
-  text=$REPLY
-  if [[ $MARK -le $CURSOR ]]; then
-    BUFFER=${BUFFER:0:$MARK}$text${BUFFER:$MARK}
-    CURSOR=$CURSOR+${#text}
-  else
-    BUFFER=${BUFFER:0:$CURSOR}$text${BUFFER:$CURSOR}
-    MARK=$MARK+${#text}
-  fi
+  _hx-selection-range
+  _hx-put $reply[1] $reply[1] "$REPLY"
 }
 zle -N _hx-paste-clipboard-before

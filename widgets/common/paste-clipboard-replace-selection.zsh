@@ -1,11 +1,7 @@
 _hx-paste-clipboard-replace-selection() {
-  local text REPLY
+  local reply REPLY
   _hx-clipboard-paste || return
-  text=$REPLY
-  zle _hx-delete
-  if [[ $CURSOR -ne 0 ]]; then 
-    (( ++CURSOR ))
-  fi
-  LBUFFER+=$text
+  _hx-selection-range
+  _hx-put $reply[1] $reply[2] "$REPLY"
 }
 zle -N _hx-paste-clipboard-replace-selection

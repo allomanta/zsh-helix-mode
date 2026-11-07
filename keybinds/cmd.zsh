@@ -58,7 +58,7 @@ bind " R" _hx-paste-clipboard-replace-selection
 bind y _hx-yank
 bind " y" _hx-yank-clipboard
 bind p _hx-paste
-bind P .vi-put-before
+bind P _hx-paste-before
 bind " p" _hx-paste-clipboard
 bind " P" _hx-paste-clipboard-before
 
