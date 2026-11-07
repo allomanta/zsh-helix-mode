@@ -9,8 +9,8 @@ bind : execute-named-cmd
 # Change modes
 bind i _hx-insert
 bind a _hx-append
-bind I .vi-insert-bol
-bind A .vi-add-eol
+bind I _hx-insert-bol
+bind A _hx-append-eol
 
 # Char movement
 bind h _vis-backward-char
