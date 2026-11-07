@@ -10,6 +10,9 @@ _hx-keep-selection() {
     REGION_ACTIVE=1
   fi
   _hx_selection=$(( REGION_ACTIVE && MARK != CURSOR ))
+  if (( !_hx_selection )); then
+    MARK=$CURSOR
+  fi
 }
 # Don't leave the selection highlighted on accepted lines
 _hx-clear-selection() {
