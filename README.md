@@ -18,6 +18,8 @@ By default ' f' in command and visual modes is set to open the terminal file man
 
 Note: this script also changes the cursor to be a block in the hx/vi normal modes and a line in the insert modes.
 
+If you use [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting), make sure to source it after `helix-mode.zsh`.
+
 ### Clipboard
 You can set you're own clipboard command using `$HX_CLIPBOARD_COPY` and `$HX_CLIPBOARD_PASTE`, eq `wl-copy` on wayland or `pbcopy` on macos. Falls back to tmux when in tmux or OSC 52 if your terminal supports it.
 
