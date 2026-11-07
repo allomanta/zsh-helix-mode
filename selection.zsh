@@ -6,6 +6,8 @@ typeset -gA _hx_selections
 _hx-keep-selection() {
   if [[ $KEYMAP != main ]]; then
     _hx_selection=0
+    # Not in insert mode, undo skips over everything typed there
+    _hx_selections[$BUFFER]="$MARK $CURSOR"
   else
     if (( _hx_selection && !REGION_ACTIVE && MARK != CURSOR )); then
       REGION_ACTIVE=1
@@ -15,15 +17,20 @@ _hx-keep-selection() {
       MARK=$CURSOR
     fi
   fi
-  _hx_selections[$BUFFER]="$MARK $CURSOR"
 }
 # Don't leave the selection highlighted on accepted lines
 _hx-clear-selection() {
   REGION_ACTIVE=0
   _hx_selections=()
 }
+# Start the first insert of a line like i does, so it's one undo step too
+_hx-start-insert() {
+  zle .vi-insert
+}
 autoload -Uz add-zle-hook-widget
 zle -N _hx-keep-selection
 zle -N _hx-clear-selection
+zle -N _hx-start-insert
 add-zle-hook-widget line-pre-redraw _hx-keep-selection
 add-zle-hook-widget line-finish _hx-clear-selection
+add-zle-hook-widget line-init _hx-start-insert
