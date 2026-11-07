@@ -51,7 +51,7 @@ bind n .vi-repeat-search
 bind N .vi-rev-repeat-search
 
 # Replace
-bind r .vi-replace-chars
+bind r _hx-replace
 bind R _hx-paste-replace-selection
 bind " R" _hx-paste-clipboard-replace-selection
 
