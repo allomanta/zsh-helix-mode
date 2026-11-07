@@ -75,8 +75,8 @@ bind x _hx-select-line
 bind '^[;' _hx-switch-selection-order
 bind '^[[200~' .bracketed-paste
 bind '~' .vi-swap-case
-bind u .undo
-bind U .redo
+bind u _hx-undo
+bind U _hx-redo
 bind d _hx-delete
 bind '^[[3~' _hx-delete
 bind c _hx-change
