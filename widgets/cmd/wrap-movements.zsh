@@ -12,8 +12,6 @@
     vi-first-non-blank
     vi-open-line-below
     vi-open-line-above
-    vi-indent
-    vi-unindent
   )
 
   for wrapee in $wrap; do
